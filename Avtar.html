@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Glory - Let The War Begin !</title>
+		<meta name="description" content="Oishii - Fine Japanese Cuisine ">
+
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/layout.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Bubblegum+Sans|Caveat+Brush|Chewy|Lobster+Two');
+
+
+		body {
+			width: 100%;
+			height: 100%;
+			}
+
+		html {
+			width: 100%;
+			height: 100%;
+			}
+
+<!-- ===== NAVIGATION ======-->
+		.navbar {
+			border: 0;
+			z-index: 9999;
+			letter-spacing: 4px;
+
+		}
+		.logo {
+			display: block;
+			height: auto;
+			width: 52px;
+			padding-top: 5px;
+			margin-right: 15px;
+		}
+
+		.navbar-brand>img {
+			height: 100%;
+			padding: 15px; /* firefox bug fix */
+			width: auto;
+		}
+		.navbar .nav > li > a {
+			line-height: 50px;
+		}
+
+		.navbar-header h1 {
+			letter-spacing: 1px;
+			color: black !important;
+			font-family: 'Lobster Two', cursive;
+		}
+
+		.navbar li a, .navbar {
+			color: black !important;
+			font-size: 12px;
+			transition: all 0.6s 0s;
+		}
+
+		.navbar-toggle {
+			background-color: transparent !important;
+			border: 0;
+		}
+
+		.navbar-nav li a:hover, .navbar-nav li.active a {
+				color: red !important;
+			}
+
+	.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0.1;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 0.1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+		}
+	}
+
+
+
+	html, 
+	body, 
+	.carousel, 
+	.carousel-inner, 
+	.carousel-inner .item {
+		height: 400px;
+	}
+
+	.item:nth-child(1) {
+		background: #74C390;
+	}
+
+	.item:nth-child(2) {
+		background: #51BCE8;
+	}
+
+	.item:nth-child(3) {
+		background: #E46653;
+	}
+	.carousel-content {
+		position: Absolute ;
+		bottom: 30%;
+		left: 40%;
+		z-index: 20;
+		color: white;
+		text-shadow: 0 5px 10px rgba(0,0,0,1);
+	}
+	
+	
+	.hovereffect {
+		width: 100%;
+		height: 100%;
+		float: left;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		cursor: default;
+	}
+
+	.hovereffect .overlay {
+		position: absolute;
+		overflow: hidden;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		width: 55%;
+		height: 81%;
+		left: 22%;
+		top: 10%;
+		border-radius: 80%;
+		border: 2px solid #FFF;
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		transition: opacity 0.35s, transform 0.35s;
+		-webkit-transform: translate3d(50%,50%,0);
+		transform: translate3d(50%,50%,0);
+	}
+
+	.hovereffect:hover .overlay {
+		background-color: rgba(0,0,0,0.3);
+	}
+
+	.hovereffect img {
+		display: block;
+		position: relative;
+		-webkit-transition: all 0.35s;
+		transition: all 0.35s;
+		}
+
+	.hovereffect:hover img {
+		filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.4" /><feFuncG type="linear" slope="1.4" /><feFuncB type="linear" slope="1.4" /></feComponentTransfer></filter></svg>#filter');
+		filter: brightness(1.4);
+		-webkit-filter: brightness(1.4);
+	}
+
+	.hovereffect h2 {
+		text-transform: uppercase;
+		text-align: center;
+		position: relative;
+		font-size: 17px;
+		padding: 10px;
+		background-color: transparent;
+		color: #FFF;
+		padding: 1em 0;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		transition: opacity 0.35s, transform 0.35s;
+		-webkit-transform: translate3d(-150%,-400%,0);
+		transform: translate3d(-150%,-400%,0);
+	}
+
+	.hovereffect a, .hovereffect p {
+		color: #FFF;
+		padding: 1em 0;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		transition: opacity 0.35s, transform 0.35s;
+		-webkit-transform: translate3d(-150%,-400%,0);
+		transform: translate3d(-150%,-400%,0);
+		}
+
+	.hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2, .hovereffect:hover .overlay {
+		opacity: 1;
+		filter: alpha(opacity=100);
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+	
+	</style>
+	
+	</head>
+	<body>
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+						<span class="glyphicon glyphicon-menu-hamburger"></span>
+					</button>
+           
+          <!----Navbar Logo----->
+				<div class="navbar-left logo"> 
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				viewBox="0 0 291 385.3" style="enable-background:new 0 0 291 385.3;" xml:space="preserve">
+				<style type="text/css">
+					.st0{fill:#000;}
+				</style>
+				<polygon class="st0" points="82.1,12 7.4,138.7 38.7,237.3 "/>
+				<polygon class="st0" points="92.7,5.3 199.4,8.7 223.4,82.7 "/>
+				<polygon class="st0" points="89.4,8.7 223.4,86.7 42.1,237.3 "/>
+				<polygon class="st0" points="206.1,15.3 262.7,66 228.1,82.7 "/>
+				<polygon class="st0" points="262.7,70 228.1,86 266.4,175.3 "/>
+				<polygon class="st0" points="228.1,92.7 262.7,179.3 173.4,328 "/>
+				<polygon class="st0" points="223.4,92.7 44.7,240 167.7,336 "/>
+				<polygon class="st0" points="252.1,210.3 184.4,380.3 170.7,339.7 "/>
+				<polygon class="st0" points="60.1,260.3 167.4,341 180.4,380.3 "/>
+				</svg>
+				</div>
+				
+		<h1 class="brand brand-name navbar-left"><div class"navbar-left"> Glory </h1>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="E:\Sakshi on the prowl\Website\gaming.html">Home</a></li>
+   				<li><a href="E:\Sakshi on the prowl\Website\About.html">About</a></li>
+   				<li><a href="E:\Sakshi on the prowl\Website\history.html">History </a></li>
+    			<li><a href="E:\Sakshi on the prowl\Website\Avtar.html">Avatar </a></li>
+				<li><a href="E:\Sakshi on the prowl\Website\contact.html">Contact</a></li>
+            </ul>
+			</div>
+		</div>
+	</nav>
+    
+	<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    </ol>
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+        <div class="active item">
+			<img src="E:\Sakshi on the prowl\Images\G11.jpg" alt="Glory : My world" width="100%" height="500px">
+		</div>
+    </div>
+</div>
+
+
+	
+	<script>
+		$('.carousel').carousel();
+	</script>
+	<br>
+	<br>
+	
+	<!--Avtar---->
+<div class="container">	
+	<h1 align="center"><font size="20"> CHOOSE AVTAR </font></h1>
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="E:\Sakshi on the prowl\Images\G33.jpg" alt="FIGHTER1">
+            <div class="overlay">
+                <h2><b>GLORY</b></h2>
+				<p>
+					<a href="E:\Sakshi on the prowl\Images\G33.jpg"><b>Fighter 1</b></a>
+				</p>
+            </div>
+    </div>
+	</div>
+	
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="E:\Sakshi on the prowl\Images\G35.png" alt="FIGHTER2">
+            <div class="overlay">
+                <h2><b>GLORY</b></h2>
+				<p>
+					<a href="E:\Sakshi on the prowl\Images\G35.png"><b>Fighter 2</b></a>
+				</p>
+            </div>
+    </div>
+	</div>
+	
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="E:\Sakshi on the prowl\Images\G36.png" alt="FIGHTER3">
+            <div class="overlay">
+                <h2><b>GLORY</b></h2>
+				<p>
+					<a href="E:\Sakshi on the prowl\Images\G36.png"><b>Fighter 3</b></a>
+				</p>
+            </div>
+    </div>
+	</div>
+	
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="E:\Sakshi on the prowl\Images\G30.png" alt="FIGHTER4">
+            <div class="overlay">
+                <h2><b>GLORY</b></h2>
+				<p>
+					<a href="E:\Sakshi on the prowl\Images\G30.png"><b>Fighter 4</b></a>
+				</p>
+            </div>
+    </div>
+	</div>
+	
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="E:\Sakshi on the prowl\Images\G29.png" alt="FIGHTER5">
+            <div class="overlay">
+                <h2><b>GLORY</b></h2>
+				<p>
+					<a href="E:\Sakshi on the prowl\Images\G29.png"><b>Fighter 5</b></a>
+				</p>
+            </div>
+    </div>
+	</div>
+	
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="E:\Sakshi on the prowl\Images\G28.png" alt="FIGHTER6">
+            <div class="overlay">
+                <h2><b>GLORY</b></h2>
+				<p>
+					<a href="E:\Sakshi on the prowl\Images\G28.png"><b>Fighter 6</b></a>
+				</p>
+            </div>
+    </div>
+	</div>
+	
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="E:\Sakshi on the prowl\Images\G26.png" alt="FIGHTER7">
+            <div class="overlay">
+                <h2><b>GLORY</b></h2>
+				<p>
+					<a href="E:\Sakshi on the prowl\Images\G26.png"><b>Fighter 7</b></a>
+				</p>
+            </div>
+    </div>
+	</div>
+	
+	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="E:\Sakshi on the prowl\Images\G27.png" alt="FIGHTER8">
+            <div class="overlay">
+                <h2><b>GLORY</b></h2>
+				<p>
+					<a href="E:\Sakshi on the prowl\Images\G27.png"><b>Fighter 8</b></a>
+				</p>
+            </div>
+    </div>
+	</div>
+	
+	
+</div>	
+	
+	<!---avtar--->
+	<br>
+	<!---footer-->
+	<footer>
+	
+	<!-- Footer -->
+	<footer class="page-footer font-small blue-grey lighten-5">
+
+		<div style="background-color: silver;">
+		<div class="container">
+
+		<!-- Grid row-->
+		<div class="row py-4 d-flex align-items-center">
+
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+		<table   class="table table-borderless">
+		<tr>
+			<td>
+          <!-- Facebook -->
+          <a class="fb-ic" href="https://www.facbook.com/" target="_blank">
+            <i class="fab fa-facebook-f white-text mr-4" style="font-size:20px;color:black;text-shadow:2px 2px 4px #000000;"> </i>
+          </a>
+		  </td>
+		  <td>
+          <!-- Twitter -->
+          <a class="tw-ic" href="https://www.twitter.com/" target="_blank">
+            <i class="fab fa-twitter white-text mr-4" style="font-size:20px;color:black;text-shadow:2px 2px 4px #000000;"> </i>
+          </a>
+		  </td>
+		  <td>
+          <!-- Google +-->
+          <a class="gplus-ic" href="https://www.google.com/" target="_blank">
+            <i class="fab fa-google-plus-g white-text mr-4" style="font-size:20px;color:black;text-shadow:2px 2px 4px #000000;"> </i>
+          </a>
+		  </td>
+		  <td>
+          <!--Linkedin -->
+          <a class="li-ic" href="https://in.linkedin.com/" target="_blank">
+            <i class="fab fa-linkedin-in white-text mr-4" style="font-size:20px;color:black;text-shadow:2px 2px 4px #000000;"> </i>
+          </a>
+		  </td>
+		  <td>
+          <!--Instagram-->
+          <a class="ins-ic" href="https://www.instagram.com/" target="_blank">
+            <i class="fab fa-instagram white-text" style="font-size:20px;color:black;text-shadow:2px 2px 4px #000000;"> </i>
+          </a>
+		  </td>
+		  </tr>
+		</table> 
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+<br>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+    <a class="dark-grey-text" href="Gaming.html"> sakshipanwar.com</a>
+  </div>
+  <!-- Copyright -->
+<br>
+</footer>
+<!-- Footer -->
+</body>
+</html>
+
+
+
+
+
